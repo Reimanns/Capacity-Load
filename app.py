@@ -1,6 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
+st.set_page_config(layout="wide")
 # Optionally, display the logo with st.image if you have it locally:
 st.image("citadel_logo.png", width=200)
 
