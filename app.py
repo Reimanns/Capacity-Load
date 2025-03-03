@@ -1,7 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-st.set_page_config(layout="wide")
 # Optionally, display the logo with st.image if you have it locally:
 st.image("citadel_logo.png", width=200)
 
@@ -222,7 +221,24 @@ const potentialProjects = [
     Engineering: 0,
     Upholstery: 0,
     Cabinetry: 0
+  },
+  {
+    number: "P7560",
+    customer: "BEFO",
+    aircraftModel: "737",
+    scope: "Additional Interior Work",
+    induction: "2025-03-23",
+    delivery: "2025-05-23",
+    Maintenance: 0,
+    Interiors: 103,
+    Avionics: 8,
+    SheetMetal: 0,
+    FinishPaint: 0,
+    Engineering: 8,
+    Upholstery: 14,
+    Cabinetry: 0
   }
+  
 ];
 
 const projectsActual = [
@@ -236,7 +252,7 @@ const projectsActual = [
     Maintenance: 458.9,
     Interiors: 5.59,
     Avionics: 0,
-    SheetMetal: 65.4,
+    SheetMetal: 107.37,
     FinishPaint: 0,
     Engineering: 0,
     Upholstery: 0,
@@ -249,10 +265,10 @@ const projectsActual = [
     scope: "Multi Check, AD's & SB's",
     induction: "2025-02-18",
     delivery: "2025-04-03",
-    Maintenance: 132.74,
-    Interiors: 9.16,
-    Avionics: 32.66,
-    SheetMetal: 0,
+    Maintenance: 391.71,
+    Interiors: 10.66,
+    Avionics: 110.46,
+    SheetMetal: 175.23,
     FinishPaint: 0,
     Engineering: 0,
     Upholstery: 0,
@@ -265,14 +281,14 @@ const projectsActual = [
     scope: "B Check, AD's & SB's",
     induction: "2025-02-23",
     delivery: "2025-03-02",
-    Maintenance: 427.35,
-    Interiors: 24,
-    Avionics: 98.29,
-    SheetMetal: 166,
+    Maintenance: 220.56,
+    Interiors: 23.42,
+    Avionics: 55.82,
+    SheetMetal: 58.39,
     FinishPaint: 0,
     Engineering: 0,
-    Upholstery: 12.5,
-    Cabinetry: 0
+    Upholstery: 17.22,
+    Cabinetry: 25.02
   },
   {
     number: "P7560",
@@ -297,14 +313,14 @@ const projectsActual = [
     scope: "Interior Mod",
     induction: "2025-04-15",
     delivery: "2025-08-31",
-    Maintenance: 0,
+    Maintenance: 140.97,
     Interiors: 309.74,
-    Avionics: 298.06,
+    Avionics: 438,
     SheetMetal: 12.32,
     FinishPaint: 89.67,
     Engineering: 0,
-    Upholstery: 607.42,
-    Cabinetry: 102.75
+    Upholstery: 732.21,
+    Cabinetry: 123.05
   },
   {
     number: "P7561",
@@ -329,14 +345,14 @@ const projectsActual = [
     scope: "Maintenance & Interior Mod",
     induction: "2025-02-06",
     delivery: "2025-03-28",
-    Maintenance: 1857.8,
-    Interiors: 3187.8,
-    Avionics: 489.91,
-    SheetMetal: 743.65,
-    FinishPaint: 265.76,
+    Maintenance: 2032.27,
+    Interiors: 3623.42,
+    Avionics: 531.81,
+    SheetMetal: 1043.93,
+    FinishPaint: 384.49,
     Engineering: 0,
-    Upholstery: 216.51,
-    Cabinetry: 284.07
+    Upholstery: 310.86,
+    Cabinetry: 367.95
   },
   {
     number: "P7592",
