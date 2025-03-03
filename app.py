@@ -398,7 +398,7 @@ const departmentCapacities = [
   { name: "Engineering",  headcount: 3,   key: "Engineering" }
 ];
 
-const PRODUCTIVITY_FACTOR = 0.8;
+const PRODUCTIVITY_FACTOR = 0.85;
 
 // ------------------------------------------------------------------------
 // 2) HELPER FUNCTIONS
