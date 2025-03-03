@@ -1,4 +1,6 @@
 import streamlit as st
+st.set_page_config(layout="wide")
+
 import streamlit.components.v1 as components
 
 # Optionally, display the logo with st.image if you have it locally:
@@ -39,8 +41,6 @@ html_code = """
   </style>
 </head>
 <body>
-
-
 
 <h1>Capacity-Load By Discipline</h1>
 
@@ -238,7 +238,6 @@ const potentialProjects = [
     Upholstery: 14,
     Cabinetry: 0
   }
-  
 ];
 
 const projectsActual = [
@@ -413,6 +412,16 @@ function parseDate(dateStr) {
   }
 }
 
+// Helper function to format a date in local time as YYYY-MM-DD.
+function formatDateLocal(d) {
+  const year = d.getFullYear();
+  let month = (d.getMonth() + 1).toString();
+  let day = d.getDate().toString();
+  if (month.length < 2) { month = '0' + month; }
+  if (day.length < 2) { day = '0' + day; }
+  return `${year}-${month}-${day}`;
+}
+
 function getWeekList() {
   let minDate = null;
   let maxDate = null;
@@ -430,8 +439,9 @@ function getWeekList() {
   expandDates(potentialProjects);
   expandDates(projectsActual);
 
+  // Set start to the earliest date and adjust to the previous Monday if needed
   const start = new Date(minDate);
-  while (start.getDay() !== 1) {
+  while (start.getDay() !== 1) {  // 1 represents Monday
     start.setDate(start.getDate() - 1);
   }
 
@@ -439,10 +449,10 @@ function getWeekList() {
   const current = new Date(start);
   while (current <= maxDate) {
     weeks.push(new Date(current));
-    current.setDate(current.getDate() + 7);
+    current.setDate(current.getDate() + 7); // Increment by 7 days for each week (Monday)
   }
 
-  return weeks.map(d => d.toISOString().slice(0, 10));
+  return weeks.map(d => formatDateLocal(d));
 }
 
 function computeWeeklyLoadsDetailed(projectsArray, disciplineKey, weekLabels) {
